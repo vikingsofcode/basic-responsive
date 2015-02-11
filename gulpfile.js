@@ -137,7 +137,7 @@ gulp.task('fontawesome-fonts', ['fontawesome'], function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch(paths.styles.watch, ['styles']);
+  gulp.watch(paths.styles.watch, ['styles', sync.reload]);
   gulp.watch(paths.scripts.source, ['scripts', sync.reload]);
   gulp.watch(paths.templates.watch, ['templates', sync.reload]);
   gulp.watch(paths.partials.watch, ['partials', sync.reload]);
